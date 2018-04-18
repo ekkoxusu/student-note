@@ -1,13 +1,12 @@
-package test;
+package one;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-public class TestMain {
+public class Nine {
 
     public static void main(String[] args) {
-        int[][] ints = {{18},{66}} ;
         String[] strings = {"hit"};
         String paragraph = "Bob hit a ball, the hit BALL flew far after it was hit.";
         System.out.println(

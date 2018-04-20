@@ -1,5 +1,7 @@
 package one;
 
+import test.TreeNode;
+
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -9,12 +11,7 @@ public class Ten {
         int[] i = {-10,-3,0,5,9};
         System.out.println(treeNodeToString(new Solution().sortedArrayToBST(i)));
     }
-    public static class TreeNode {
-      int val;
-      TreeNode left;
-      TreeNode right;
-      TreeNode(int x) { val = x; }
-    }
+
     static class Solution {
         //使用二分查找法解决问题，将其分为3个整体3个整体看待问题
         public TreeNode sortedArrayToBST(int[] nums) {

@@ -1,25 +1,43 @@
 package test;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+import static test.TreeNode.stringToTreeNode;
+
 public class TestMain {
 
-    public static void main(String[] args) {
-        System.out.println(new Solution().hasAlternatingBits(5));
+    public static void main(String[] args) throws  Exception{
+        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+        String line;
+        while ((line = in.readLine()) != null) {
+            TreeNode root = stringToTreeNode(line);
+            System.out.println(new Solution().getMinimumDifference(root));
+        }
+
     }
     static class Solution {
-        //1.转化为二进制字符串 如果触雷则false
-        //2.使用二进制算法
-        public boolean hasAlternatingBits(int n) {
-            //1 10 101 1010
-            //111  10 01 10 01|10 11
-            char[] val = Integer.toBinaryString(n).toCharArray();
-            char temp = val[0];
-            for(int i=1;i<val.length;i++){
-                if(temp == val[i]){
-                    return false;
-                }
-                temp = val[i];
+        int min = Integer.MAX_VALUE;
+
+        TreeNode prev = null;
+
+        public int getMinimumDifference(TreeNode root) {
+
+            if (root == null) return min;
+
+            getMinimumDifference(root.left);
+
+            if (prev != null)
+            {
+                min = Math.min(min, root.val - prev.val);
             }
-            return true;
+
+            prev = root;
+
+            getMinimumDifference(root.right);
+
+            return min;
         }
+
     }
 }

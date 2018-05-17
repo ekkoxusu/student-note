@@ -9,7 +9,7 @@ public class TestMain {
 //            TreeNode left = stringToTreeNode(line);
 //            System.out.println(new Solution().preorderTraversal(left));
 //        }
-
+        String s = "abc";
     }
     /**
      * Definition for a binary tree node.
@@ -21,5 +21,7 @@ public class TestMain {
      * }
      */
     static class Solution {
+
+
     }
 }

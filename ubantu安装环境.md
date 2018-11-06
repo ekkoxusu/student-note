@@ -125,7 +125,8 @@ http {
 >
 > kill -9 'cat /usr/local/nginx/logs/nginx.pid'
 
-
+### 主从同步 主主复制
+[详细操作](https://www.cnblogs.com/kevingrace/p/6256603.html)
 
 ## 本次常用linux命令
 

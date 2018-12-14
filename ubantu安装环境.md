@@ -43,7 +43,7 @@ source ~/.bashrc_profile
 > \*.\* 代表 所有database的所有表 root表示用户名 %表示支持外部链接的ip
 >
 > grant all PRIVILEGES on \*.\* to root@'%'  identified by 'password';
-
+> FLUSH   PRIVILEGES
 ## NGINX
 
 [下载NGINX](http://nginx.org/en/download.html)
